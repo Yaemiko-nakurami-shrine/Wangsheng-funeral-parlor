@@ -1,0 +1,5 @@
+body {
+  background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+}
