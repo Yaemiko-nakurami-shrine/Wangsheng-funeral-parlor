@@ -1,128 +1,38 @@
-/* 1. Definição de Variáveis (Essencial para o seu código funcionar) */
 :root {
     --hu-red: #a61c1c;
     --hu-gold: #e3b04b;
     --hu-brown: #2a1b1b;
-    --hu-dark: #1a0f0f;
-    --hu-text: #f5f5f5;
 }
 
-/* 2. Reset e Configuração Global */
 body {
     background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    margin: 0;
-    color: var(--hu-text);
     font-family: 'Segoe UI', sans-serif;
-    /* Removi o flex para que o site role para baixo corretamente */
-    display: block; 
-    line-height: 1.6;
+    color: white;
+    margin: 0;
 }
 
-/* 3. Container Principal (Onde a mágica acontece) */
-main, .wangsheng-container {
-    position: relative;
-    z-index: 2;
-    background: rgba(26, 15, 15, 0.95); /* Leve transparência */
-    max-width: 800px;
-    margin: 40px auto;
+.wangsheng-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: rgba(26, 15, 15, 0.95);
     padding: 30px;
     border-radius: 15px;
     border: 1px solid var(--hu-gold);
-    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
 }
 
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
+header { text-align: center; }
+.logo-hu { font-size: 3rem; }
 
-header h1 {
-    color: var(--hu-gold);
-    font-size: 2.2rem;
-    margin: 0;
-}
-
-/* 4. Grid de Serviços */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.service-card {
-    background: var(--hu-brown);
-    border: 2px solid #5c3d2e;
-    padding: 20px;
-    border-radius: 8px;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--hu-red);
-}
-
-.tag {
-    position: absolute;
-    top: -10px;
-    right: 10px;
-    background: var(--hu-red);
-    color: white;
-    padding: 4px 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    border-radius: 4px;
-}
-
-.service-card h3 {
-    color: var(--hu-gold);
-    margin-top: 10px;
-}
-
-.price {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #ff4d4d;
-}
-
-.special {
-    background: linear-gradient(145deg, #2a1b1b, #1a0f0f);
-    border-style: dashed;
-}
-
-/* 5. Formulário e Agendamento */
-.booking-section {
-    background: var(--hu-dark);
-    padding: 25px;
-    margin-top: 30px;
-    border-radius: 10px;
-    border-left: 5px solid var(--hu-red);
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--hu-gold);
-}
-
-input[type="text"], select {
+.input-group { margin-bottom: 15px; }
+input, select {
     width: 100%;
     padding: 10px;
-    background: #331f1f;
-    border: 1px solid #5c3d2e;
+    background: var(--hu-brown);
     color: white;
-    border-radius: 5px;
-    box-sizing: border-box; /* Evita que o input saia da tela */
+    border: 1px solid var(--hu-gold);
 }
 
 .btn-submit {
@@ -131,118 +41,5 @@ input[type="text"], select {
     background: var(--hu-red);
     color: white;
     border: none;
-    font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-.btn-submit:hover {
-    background: #ff4d4d;
-}
-
-/* 6. Cupons e Depoimentos */
-.coupon-box {
-    text-align: center;
-    margin: 30px 0;
-    padding: 15px;
-    border: 2px dashed var(--hu-gold);
-    background: rgba(166, 28, 28, 0.1);
-}
-
-#get-coupon {
-    background: var(--hu-gold);
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.testimonial-card {
-    font-style: italic;
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    margin-bottom: 15px;
-    border-left: 4px solid var(--hu-red);
-}
-
-/* 7. Efeito das Chamas */
-.fire-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.flame {
-    position: absolute;
-    bottom: 0;
-    width: 25px;
-    height: 25px;
-    background: rgba(166, 28, 28, 0.4);
-    border-radius: 50%;
-    filter: blur(8px);
-    animation: burn 3s infinite ease-in;
-}
-
-@keyframes burn {
-    0% { transform: translateY(0) scale(1); opacity: 0.8; }
-    100% { transform: translateY(-180px) scale(2.5); opacity: 0; }
-}
-
-.flame:nth-child(1) { left: 15%; animation-delay: 0s; }
-.flame:nth-child(2) { left: 50%; animation-delay: 1.2s; }
-.flame:nth-child(3) { left: 85%; animation-delay: 0.5s; }
-/* Efeito de Escrita de Cupom */
-#coupon-display {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    color: var(--hu-gold);
-    min-height: 1.5em;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(227, 176, 75, 0.5);
-}
-
-/* Contador de Mora */
-.mora-counter {
-    background: #3d2b1f;
-    padding: 10px;
-    border-radius: 50px;
-    text-align: center;
-    border: 1px solid var(--hu-gold);
-    margin-bottom: 20px;
-}
-
-#mora-amount {
-    font-size: 1.5rem;
-    color: #ffd700;
-    font-family: 'Courier New', monospace;
-}
-
-/* O Fantasminha que aparece no clique */
-.floating-ghost {
-    position: absolute;
-    font-size: 2rem;
-    pointer-events: none;
-    animation: ghostUp 2s forwards ease-out;
-    z-index: 999;
-}
-
-@keyframes ghostUp {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-200px) rotate(20deg); opacity: 0; }
-}
-
-.logo-hu {
-    font-size: 4rem;
-    animation: float 3s infinite ease-in-out;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
 }

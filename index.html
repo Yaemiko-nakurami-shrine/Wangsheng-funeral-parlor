@@ -7,46 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="ghost-container"></div>
-
     <main class="wangsheng-container">
         <header>
             <div class="logo-hu">👻</div>
             <h1>Wangsheng Funeral Parlor</h1>
-            <p class="subtitle">"Transferência imediata para o outro mundo... com desconto!"</p>
+            <p>"Transferência imediata para o outro mundo... com desconto!"</p>
         </header>
-
-        <div class="mora-counter">
-            <p>Mora acumulada para o jantar do Zhongli:</p>
-            <span id="mora-amount">0</span>
-        </div>
-
-        <section class="services-grid">
-            <div class="service-card" onclick="addMora(200000)">
-                <div class="tag">Mais Vendido</div>
-                <h3>Pacote "Adeus Liyue"</h3>
-                <p>Serviço completo. Compre um agora e garanta o do seu vizinho pela metade do preço!</p>
-                <span class="price">200,000 Mora</span>
-            </div>
-
-            <div class="service-card special" onclick="addMora(15000)">
-                <h3>Consultoria de Haiku</h3>
-                <p>Poemas fúnebres que rimam com "caixão". A primeira estrofe é grátis.</p>
-                <span class="price">15,000 Mora</span>
-            </div>
-        </section>
 
         <section class="booking-section">
             <h2>📜 Contrato de Descanso</h2>
-           <form id="wangsheng-form" action="https://formspree.io/f/damien.brito@escola.pr.gov.br" method="POST"></form>
+            <form id="wangsheng-form" action="https://formspree.io/f/mreyzdow" method="POST">
                 <div class="input-group">
                     <label>Nome do "Candidato":</label>
-                    <input type="text" id="client-name" placeholder="Ex: Baizhu (ele precisa...)" required>
+                    <input type="text" name="nome_cliente" id="client-name" placeholder="Ex: Baizhu" required>
                 </div>
                 
                 <div class="input-group">
                     <label>Tipo de Madeira:</label>
-                    <select id="wood-type">
+                    <select name="madeira" id="wood-type">
                         <option value="cedro">Cedro de Qingce</option>
                         <option value="seda">Seda de Liyue (Luxo)</option>
                         <option value="caixa">Caixa de Papelão (Econômico)</option>
@@ -55,23 +33,13 @@
 
                 <button type="submit" class="btn-submit">Assinar com Sangue... ou Tinta! 🖋️</button>
             </form>
-
-            <div class="coupon-box">
-                <button id="get-coupon">Tentar a Sorte! 🧧</button>
-                <div id="coupon-display"></div>
-            </div>
         </section>
 
-        <footer class="hu-footer">
-            <p>"Uma vez enterrado, o descanso é garantido. Ou seu dinheiro de volta (em outra vida)!"</p>
-        </footer>
+        <div class="coupon-box">
+            <button id="get-coupon">Tentar a Sorte! 🧧</button>
+            <p id="coupon-text"></p>
+        </div>
     </main>
-
-    <div class="fire-container">
-        <div class="flame"></div>
-        <div class="flame"></div>
-        <div class="flame"></div>
-    </div>
 
     <script src="script.js"></script>
 </body>
