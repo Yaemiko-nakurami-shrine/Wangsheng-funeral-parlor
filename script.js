@@ -1,5 +1,4 @@
-const coupons = [
-    "COMPRE 1, LEVE 2! (Para você e um amigo)",
+const coupons= ["COMPRE 1, LEVE 2! (Para você e um amigo)",
     "DESCONTO DE 77% - Válido apenas para fantasmas",
     "CUPOM EXPIROU... igual ao cliente! Hehe~",
     "VALE-LANCHE: Um lanche grátis no Quiosque da Wanmin",
@@ -11,9 +10,10 @@ document.getElementById('wangsheng-form').addEventListener('submit', function(e)
     alert('Aiya! Pedido recebido. A Diretora Hu Tao entrará em contato em breve... ou te visitará à noite! 👻');
 });
 
-document.getElementById('get-coupon').addEventListener('click', () => {
-    const random = coupons[Math.floor(Math.random() * coupons.length)];
-    document.getElementById('coupon-text').innerText = random;
+document.getElementById('wangsheng-form').addEventListener('submit', function() {
+    alert('Pedido enviado para o Santuário... digo, para a Funerária! Verifique seu e-mail para confirmar 🌸');
+    // Não use e.preventDefault() aqui para o Formspree funcionar!
+});
 });
 // 1. Sistema de Cupons da Hu Tao
 const coupons = [
@@ -24,9 +24,10 @@ const coupons = [
     "⚰️ VIP: Almofada extra no caixão"
 ];
 
-document.getElementById('get-coupon').addEventListener('click', function(e) {
-    const display = document.getElementById('coupon-display');
-    const random = coupons[Math.floor(Math.random() * coupons.length)];
+document.getElementById('wangsheng-form').addEventListener('submit', function() {
+    alert('Pedido enviado para o Santuário... digo, para a Funerária! Verifique seu e-mail para confirmar 🌸');
+    // Não use e.preventDefault() aqui para o Formspree funcionar!
+});
     
     // Efeito de som visual
     createGhost(e.pageX, e.pageY);
