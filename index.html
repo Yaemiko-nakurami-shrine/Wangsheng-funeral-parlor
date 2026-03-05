@@ -2,57 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Wangsheng Funeral Parlor - Diretora Hu Tao</title>
+    <title>Wangsheng Funeral Parlor - Início</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav>
+        <a href="index.html">Início</a> | <a href="servicos.html">Serviços</a> | <a href="contato.html">Contato</a>
+    </nav>
     <main class="wangsheng-container">
-        <header>
-            <div class="logo-hu">👻</div>
-            <h1>Wangsheng Funeral Parlor</h1>
-            <p>"A vida é curta, mas o nosso serviço é eterno!"</p>
-        </header>
-
-        <div class="mora-counter">
-            Mora para o jantar: <span id="mora-amount">0</span> 🪙
-        </div>
-
-        <section class="services-grid">
-            <div class="service-card" onclick="addMora(200000)">
-                <div class="tag">Mais Vendido</div>
-                <h3>Pacote "Adeus Liyue"</h3>
-                <p>Cedro de primeira qualidade. Leve um, ganhe o do seu vizinho!</p>
-                <span class="price">200,000 Mora</span>
-            </div>
-            <div class="service-card special" onclick="addMora(15000)">
-                <h3>Consultoria Poética</h3>
-                <p>Poemas para o além. Se não chorarem, devolvemos metade do pagamento.</p>
-                <span class="price">15,000 Mora</span>
-            </div>
-        </section>
-
-        <section class="booking-section">
-            <h2>📜 Assine seu Contrato</h2>
-            <form id="wangsheng-form" action="https://formspree.io/f/damien.brito@escola.pr.gov.br" method="POST">
-                <input type="text" name="nome" placeholder="Seu nome" required>
-                <select name="madeira">
-                    <option value="cedro">Cedro de Qingce</option>
-                    <option value="seda">Seda de Liyue (Luxo)</option>
-                </select>
-                <button type="submit" class="btn-submit">Confirmar Destino</button>
-            </form>
-        </section>
-
-        <div class="coupon-box">
-            <button id="get-coupon">Sortear Cupom 🧧</button>
-            <p id="coupon-text"></p>
-        </div>
+        <h1>Bem-vindo à Wangsheng</h1>
+        <p>A vida é um sonho, a morte é o despertar. Estamos aqui para garantir que sua transição seja perfeita.</p>
+        <div class="mora-counter">Mora acumulada: <span id="mora-amount">0</span> 🪙</div>
     </main>
-
-    <div class="fire-container">
-        <div class="flame"></div><div class="flame"></div><div class="flame"></div>
-    </div>
-
     <script src="script.js"></script>
 </body>
 </html>
