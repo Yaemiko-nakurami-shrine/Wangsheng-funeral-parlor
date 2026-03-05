@@ -2,16 +2,60 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wangsheng Funeral Parlor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Início</a> | <a href="servicos.html">Serviços</a> | <a href="contato.html">Contato</a>
+    <nav class="main-nav">
+        <a href="index.html">🏠 Início</a> | <a href="servicos.html">⚰️ Serviços</a>
     </nav>
-    <main class="container">
-        <h1>Bem-vindo à Wangsheng</h1>
-        <p>A vida é um sonho, a morte é o despertar. Estamos aqui para garantir que sua transição seja perfeita.</p>
+
+    <main class="wangsheng-container">
+        <header>
+            <div class="logo-hu">👻</div>
+            <h1>Wangsheng Funeral Parlor</h1>
+            <p><em>"A vida é um sonho, a morte é o despertar."</em></p>
+        </header>
+
+        <div class="mora-counter">
+            Mora para o jantar: <span id="mora-amount">0</span> 🪙
+        </div>
+
+        <section class="booking-section">
+            <h2>📜 Assine seu Contrato</h2>
+            <form id="wangsheng-form" action="https://formspree.io/f/damien.brito@escola.pr.gov.br" method="POST">
+                <div class="input-group">
+                    <input type="text" name="nome_cliente" id="client-name" placeholder="Nome do Candidato" required>
+                </div>
+                <div class="input-group">
+                    <select name="madeira">
+                        <option value="cedro">Cedro de Qingce</option>
+                        <option value="seda">Seda de Liyue (Luxo)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-submit">Assinar Contrato</button>
+            </form>
+        </section>
+
+        <section class="testimonials">
+            <h3>💬 Depoimentos dos Clientes</h3>
+            <div class="testimonial-box">
+                <p><em>"O atendimento foi tão bom que nem queria voltar!"</em></p>
+                <span>- Fantasma Anônimo</span>
+            </div>
+            <div class="testimonial-box">
+                <p><em>"Seda macia, conforto eterno. Nota 10!"</em></p>
+                <span>- Cliente #77</span>
+            </div>
+        </section>
+
+        <section class="coupon-section">
+            <button id="get-coupon" class="btn-coupon">Tentar a Sorte! 🧧</button>
+            <div id="coupon-display"></div>
+        </section>
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
