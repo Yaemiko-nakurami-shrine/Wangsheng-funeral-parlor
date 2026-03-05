@@ -1,18 +1,23 @@
-const coupons = [
-    "🧧 COMPRE UM, GANHE DOIS!",
-    "🌸 DESCONTO DE 77% - Exclusivo para Qiqi",
-    "💀 CUPOM EXPIRADO...",
-    "🍡 VALE-LANCHE grátis",
-    "⚰️ VIP: Almofada extra"
-];
+// Sistema de Mora
+let currentMora = 0;
+function addMora(amount) {
+    currentMora += amount;
+    document.getElementById('mora-amount').innerText = currentMora.toLocaleString();
+}
 
-// Lógica de Cupons
+// Sistema de Cupons
+const coupons = ["🧧 DESCONTO 77%", "💀 VIP: Caixão de Seda", "🌸 GRÁTIS: Sopa de Bolinhas"];
 document.getElementById('get-coupon').addEventListener('click', () => {
-    const random = coupons[Math.floor(Math.random() * coupons.length)];
-    document.getElementById('coupon-text').innerText = random;
+    document.getElementById('coupon-text').innerText = coupons[Math.floor(Math.random() * coupons.length)];
 });
 
-// Envio do formulário (o Formspree trata o redirecionamento)
-document.getElementById('wangsheng-form').addEventListener('submit', function() {
-    alert('Pedido enviado para a Funerária! A Diretora já está a preparar a pá... ⚰️');
+// Efeito de Fantasmas no Clique
+document.addEventListener('click', (e) => {
+    const ghost = document.createElement('div');
+    ghost.className = 'floating-ghost';
+    ghost.innerText = '👻';
+    ghost.style.left = e.pageX + 'px';
+    ghost.style.top = e.pageY + 'px';
+    document.body.appendChild(ghost);
+    setTimeout(() => ghost.remove(), 2000);
 });

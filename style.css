@@ -1,57 +1,20 @@
-:root {
-    --hu-red: #a61c1c;
-    --hu-gold: #e3b04b;
-    --hu-brown: #2a1b1b;
-}
+:root { --hu-red: #a61c1c; --hu-gold: #e3b04b; --hu-brown: #2a1b1b; }
 
-body {
+body { 
     background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: 'Segoe UI', sans-serif;
-    color: white;
-    margin: 0;
+    background-size: cover; font-family: sans-serif; color: white; margin: 0;
 }
 
 .wangsheng-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background: rgba(26, 15, 15, 0.95);
-    padding: 30px;
-    border-radius: 15px;
-    border: 1px solid var(--hu-gold);
+    max-width: 600px; margin: 50px auto; background: rgba(26, 15, 15, 0.9);
+    padding: 30px; border-radius: 15px; border: 2px solid var(--hu-gold);
 }
 
-header { text-align: center; }
-.logo-hu { font-size: 3rem; }
-
-.input-group { margin-bottom: 15px; }
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    background: var(--hu-brown);
-    color: white;
-    border: 1px solid var(--hu-gold);
-    box-sizing: border-box; /* Garante alinhamento correto */
+.floating-ghost {
+    position: absolute; pointer-events: none;
+    animation: ghostUp 2s forwards;
 }
 
-input:focus, select:focus {
-    outline: 2px solid var(--hu-red); /* Destaque ao clicar */
-}
+@keyframes ghostUp { to { transform: translateY(-100px); opacity: 0; } }
 
-.btn-submit {
-    width: 100%;
-    padding: 15px;
-    background: var(--hu-red);
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px; /* Separação do botão */
-    font-weight: bold;
-}
-
-.btn-submit:hover {
-    filter: brightness(1.2); /* Efeito simples de hover */
-}
+.btn-submit { width: 100%; padding: 15px; background: var(--hu-red); color: white; border: none; cursor: pointer; }
