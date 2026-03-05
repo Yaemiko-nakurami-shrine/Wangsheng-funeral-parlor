@@ -1,25 +1,23 @@
-:root { --hu-red: #a61c1c; --hu-gold: #e3b04b; --hu-brown: #2a1b1b; }
+:root { --hu-red: #a61c1c; --hu-gold: #e3b04b; }
 
 body { 
     background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
-    background-size: cover; font-family: sans-serif; color: white; margin: 0;
+    background-size: cover; 
+    background-position: center;
+    background-attachment: fixed;
+    font-family: sans-serif; 
+    color: white; 
+    margin: 0;
 }
 
-.wangsheng-container {
-    max-width: 600px; margin: 50px auto; background: rgba(26, 15, 15, 0.9);
-    padding: 30px; border-radius: 15px; border: 2px solid var(--hu-gold);
+nav { background: rgba(0, 0, 0, 0.7); padding: 15px; text-align: center; }
+nav a { color: var(--hu-gold); margin: 0 15px; text-decoration: none; font-weight: bold; }
+
+.container { 
+    max-width: 600px; 
+    margin: 50px auto; 
+    background: rgba(0, 0, 0, 0.85); 
+    padding: 30px; 
+    border-radius: 15px; 
+    border: 1px solid var(--hu-gold);
 }
-
-.floating-ghost {
-    position: absolute; pointer-events: none;
-    animation: ghostUp 2s forwards;
-}
-
-@keyframes ghostUp { to { transform: translateY(-100px); opacity: 0; } }
-
-.btn-submit { width: 100%; padding: 15px; background: var(--hu-red); color: white; border: none; cursor: pointer; }
-:root { --hu-red: #a61c1c; --hu-gold: #e3b04b; }
-body { background: #1a0f0f; color: white; font-family: sans-serif; }
-.service-img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; }
-nav { padding: 20px; text-align: center; background: var(--hu-brown); }
-.wangsheng-container { max-width: 800px; margin: 50px auto; padding: 20px; border: 1px solid var(--hu-gold); }
