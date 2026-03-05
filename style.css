@@ -1,62 +1,92 @@
+/* 1. Definição de Variáveis (Essencial para o seu código funcionar) */
+:root {
+    --hu-red: #a61c1c;
+    --hu-gold: #e3b04b;
+    --hu-brown: #2a1b1b;
+    --hu-dark: #1a0f0f;
+    --hu-text: #f5f5f5;
+}
+
+/* 2. Reset e Configuração Global */
 body {
     background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    color: var(--hu-text);
+    font-family: 'Segoe UI', sans-serif;
+    /* Removi o flex para que o site role para baixo corretamente */
+    display: block; 
+    line-height: 1.6;
 }
+
+/* 3. Container Principal (Onde a mágica acontece) */
+main, .wangsheng-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(26, 15, 15, 0.95); /* Leve transparência */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid var(--hu-gold);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+}
+
 header {
-    background: rgba(26, 15, 15, 0.8);
-    padding: 20px;
-    border-radius: 10px;
     text-align: center;
     margin-bottom: 30px;
 }
+
+header h1 {
+    color: var(--hu-gold);
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+/* 4. Grid de Serviços */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
+    margin: 20px 0;
 }
 
 .service-card {
-    background: #2a1b1b;
+    background: var(--hu-brown);
     border: 2px solid #5c3d2e;
-    padding: 25px;
+    padding: 20px;
     border-radius: 8px;
     position: relative;
-    transition: transform 0.3s;
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
-    border-color: #a61c1c; /* Vermelho da Hu Tao */
+    transform: translateY(-8px);
+    border-color: var(--hu-red);
 }
 
 .tag {
     position: absolute;
     top: -10px;
     right: 10px;
-    background: #a61c1c;
+    background: var(--hu-red);
     color: white;
-    padding: 5px 10px;
-    font-size: 0.7rem;
+    padding: 4px 12px;
+    font-size: 0.75rem;
     font-weight: bold;
     border-radius: 4px;
 }
 
 .service-card h3 {
-    color: #e3b04b; /* Dourado */
-    margin-top: 0;
+    color: var(--hu-gold);
+    margin-top: 10px;
 }
 
 .price {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: bold;
     color: #ff4d4d;
 }
@@ -65,79 +95,56 @@ header {
     background: linear-gradient(145deg, #2a1b1b, #1a0f0f);
     border-style: dashed;
 }
-.booking-section {
-    background: #1e1414;
-    border: 1px solid #a61c1c;
-    padding: 30px;
-    max-width: 500px;
-    margin: 40px auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
 
-.booking-section h2 {
-    color: #e3b04b;
-    text-align: center;
-    margin-bottom: 25px;
+/* 5. Formulário e Agendamento */
+.booking-section {
+    background: var(--hu-dark);
+    padding: 25px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--hu-red);
 }
 
 .input-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .input-group label {
     display: block;
-    color: #f5f5f5;
-    margin-bottom: 8px;
-    font-size: 0.9rem;
+    margin-bottom: 5px;
+    color: var(--hu-gold);
 }
 
 input[type="text"], select {
     width: 100%;
-    padding: 12px;
-    background: #2a1b1b;
+    padding: 10px;
+    background: #331f1f;
     border: 1px solid #5c3d2e;
     color: white;
     border-radius: 5px;
-    outline: none;
-}
-
-input[type="text"]:focus {
-    border-color: #a61c1c;
-}
-
-.radio-options {
-    color: #ccc;
-    font-size: 0.85rem;
+    box-sizing: border-box; /* Evita que o input saia da tela */
 }
 
 .btn-submit {
     width: 100%;
     padding: 15px;
-    background: #a61c1c;
+    background: var(--hu-red);
     color: white;
     border: none;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
+    margin-top: 10px;
 }
 
 .btn-submit:hover {
     background: #ff4d4d;
-    box-shadow: 0 0 20px rgba(166, 28, 28, 0.6);
-}
-main, .wangsheng-container {
-    position: relative; /* Obrigatório para o z-index funcionar */
-    z-index: 2;         /* Coloca o conteúdo na frente */
-    background: rgba(26, 15, 15, 0.9); /* Fundo escuro para o texto não sumir na imagem */
-    padding: 20px;
-    border-radius: 15px;
 }
 
+/* 6. Cupons e Depoimentos */
 .coupon-box {
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
     padding: 15px;
     border: 2px dashed var(--hu-gold);
     background: rgba(166, 28, 28, 0.1);
@@ -145,6 +152,7 @@ main, .wangsheng-container {
 
 #get-coupon {
     background: var(--hu-gold);
+    color: #000;
     border: none;
     padding: 10px 20px;
     font-weight: bold;
@@ -152,46 +160,40 @@ main, .wangsheng-container {
     border-radius: 5px;
 }
 
-#coupon-text {
-    margin-top: 10px;
-    font-family: 'Courier New', Courier, monospace;
-    color: #fff;
-    font-weight: bold;
-}
-.testimonials { margin-top: 50px; }
 .testimonial-card {
     font-style: italic;
     background: rgba(255,255,255,0.05);
     padding: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-left: 4px solid var(--hu-red);
 }
+
+/* 7. Efeito das Chamas */
 .fire-container {
     position: fixed;
     bottom: 0;
     width: 100%;
     height: 100px;
-    pointer-events: none; /* Não atrapalha os cliques */
+    pointer-events: none;
     z-index: 1;
 }
 
 .flame {
     position: absolute;
     bottom: 0;
-    width: 20px;
-    height: 20px;
-    background: rgba(166, 28, 28, 0.5);
+    width: 25px;
+    height: 25px;
+    background: rgba(166, 28, 28, 0.4);
     border-radius: 50%;
-    filter: blur(10px);
+    filter: blur(8px);
     animation: burn 3s infinite ease-in;
 }
 
 @keyframes burn {
     0% { transform: translateY(0) scale(1); opacity: 0.8; }
-    100% { transform: translateY(-200px) scale(2); opacity: 0; }
+    100% { transform: translateY(-180px) scale(2.5); opacity: 0; }
 }
 
-/* Espalhar as chamas */
-.flame:nth-child(1) { left: 20%; animation-delay: 0s; }
-.flame:nth-child(2) { left: 50%; animation-delay: 1s; }
-.flame:nth-child(3) { left: 80%; animation-delay: 2s; }
+.flame:nth-child(1) { left: 15%; animation-delay: 0s; }
+.flame:nth-child(2) { left: 50%; animation-delay: 1.2s; }
+.flame:nth-child(3) { left: 85%; animation-delay: 0.5s; }
