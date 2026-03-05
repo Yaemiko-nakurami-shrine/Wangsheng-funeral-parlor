@@ -27,12 +27,18 @@ header { text-align: center; }
 .logo-hu { font-size: 3rem; }
 
 .input-group { margin-bottom: 15px; }
+
 input, select {
     width: 100%;
     padding: 10px;
     background: var(--hu-brown);
     color: white;
     border: 1px solid var(--hu-gold);
+    box-sizing: border-box; /* Garante alinhamento correto */
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--hu-red); /* Destaque ao clicar */
 }
 
 .btn-submit {
@@ -42,4 +48,10 @@ input, select {
     color: white;
     border: none;
     cursor: pointer;
+    margin-top: 10px; /* Separação do botão */
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    filter: brightness(1.2); /* Efeito simples de hover */
 }
