@@ -135,3 +135,63 @@ main, .wangsheng-container {
     border-radius: 15px;
 }
 
+.coupon-box {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border: 2px dashed var(--hu-gold);
+    background: rgba(166, 28, 28, 0.1);
+}
+
+#get-coupon {
+    background: var(--hu-gold);
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#coupon-text {
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-weight: bold;
+}
+.testimonials { margin-top: 50px; }
+.testimonial-card {
+    font-style: italic;
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--hu-red);
+}
+.fire-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    pointer-events: none; /* Não atrapalha os cliques */
+    z-index: 1;
+}
+
+.flame {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: rgba(166, 28, 28, 0.5);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: burn 3s infinite ease-in;
+}
+
+@keyframes burn {
+    0% { transform: translateY(0) scale(1); opacity: 0.8; }
+    100% { transform: translateY(-200px) scale(2); opacity: 0; }
+}
+
+/* Espalhar as chamas */
+.flame:nth-child(1) { left: 20%; animation-delay: 0s; }
+.flame:nth-child(2) { left: 50%; animation-delay: 1s; }
+.flame:nth-child(3) { left: 80%; animation-delay: 2s; }
