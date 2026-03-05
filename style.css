@@ -1,7 +1,20 @@
 body {
-  background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
-  background-size: cover; /* Faz a imagem cobrir toda a tela */
-  background-position: center; /* Centraliza a imagem */
+    background-image: url("https://64.media.tumblr.com/31a07b2c631be3d67c2fbcbf24426e8e/b289ae9928824293-ef/s640x960/d3e55ee237f351a7e9802d89ba00652802ed3260.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+header {
+    background: rgba(26, 15, 15, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 .services-grid {
     display: grid;
@@ -114,9 +127,11 @@ input[type="text"]:focus {
     background: #ff4d4d;
     box-shadow: 0 0 20px rgba(166, 28, 28, 0.6);
 }
-<script>
-    document.getElementById('wangsheng-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        alert('Aiya! Pedido recebido. A Diretora Hu Tao entrará em contato em breve... ou te visitará à noite! 👻');
-    });
-</script>
+main, .wangsheng-container {
+    position: relative; /* Obrigatório para o z-index funcionar */
+    z-index: 2;         /* Coloca o conteúdo na frente */
+    background: rgba(26, 15, 15, 0.9); /* Fundo escuro para o texto não sumir na imagem */
+    padding: 20px;
+    border-radius: 15px;
+}
+
