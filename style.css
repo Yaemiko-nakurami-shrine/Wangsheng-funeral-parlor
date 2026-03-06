@@ -67,3 +67,12 @@ nav a { color: var(--hu-gold); margin: 0 15px; text-decoration: none; font-weigh
     transform: translateY(-10px);
     box-shadow: 0 0 20px rgba(157, 93, 184, 0.4);
 }
+/* Para o fundo de toda a página */
+.inazuma-theme {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://i.pinimg.com/1200x/0c/26/77/0c267789a2e0e3c02adae6ca862ee32c.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Faz com que a imagem fique parada enquanto fazes scroll */
+    color: white;
+}
