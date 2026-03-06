@@ -21,3 +21,57 @@ nav a { color: var(--hu-gold); margin: 0 15px; text-decoration: none; font-weigh
     border-radius: 15px; 
     border: 1px solid var(--hu-gold);
 }
+/* Tema de Inazuma */
+.inazuma-theme {
+    background-color: #1a0b2e; /* Roxo bem escuro */
+    color: #e0d1ff;
+    font-family: 'Segoe UI', serif;
+}
+
+.inazuma-banner {
+    background: linear-gradient(rgba(42, 26, 61, 0.7), rgba(26, 11, 46, 1)), 
+                url("https://i.pinimg.com/1200x/0c/26/77/0c267789a2e0e3c02adae6ca862ee32c.jpg"); /* Exemplo de fundo */
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 3px solid #9d5db8;
+}
+
+.inazuma-banner h1 {
+    font-size: 3rem;
+    color: #bc8cf2;
+    text-shadow: 0 0 15px #6a2c91;
+}
+
+.info-section {
+    display: flex;
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.info-card {
+    background: #2a1a3d;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #9d5db8;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(157, 93, 184, 0.4);
+}
+.info-card h2 {
+    color: #bc8cf2;
+    margin-bottom: 10px;
+}
+.info-card p {
+    color: #e0d1ff;
+    line-height: 1.5;
+}
